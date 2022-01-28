@@ -466,8 +466,8 @@ def Killua_about_callback(update, context):
         )
     elif query.data == "Killua_support":
         query.message.edit_text(
-            text=f"*๏ {dispatcher.bot.first_name} support chats*"
-            "\nJoin My Support Group/Channel for see or report a problem on Skyzu.",
+            text=f"*๏ {dispatcher.bot.first_name} Support Chat*"
+            "\n⚠️ Join My Support Group/Channel for see or report a problem on Killua",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
