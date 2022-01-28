@@ -323,7 +323,7 @@ def help_button(update, context):
         if mod_match:
             module = mod_match.group(1)
             text = (
-                "Here is the help for the *{}* module:\n".format(
+                "Here is the help for the *{}* module :\n".format(
                     HELPABLE[module].__mod_name__
                 )
                 + HELPABLE[module].__help__
@@ -590,7 +590,7 @@ def get_help(update: Update, context: CallbackContext):
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="ɢᴏ ʙᴀᴄᴋ​", callback_data="help_back")]]
+                [[InlineKeyboardButton(text="Go Back​", callback_data="help_back")]]
             ),
         )
 
@@ -607,7 +607,7 @@ def send_settings(chat_id, user_id, user=False):
             )
             dispatcher.bot.send_message(
                 user_id,
-                "These are your current settings:" + "\n\n" + settings,
+                "These are your current settings :" + "\n\n" + settings,
                 parse_mode=ParseMode.MARKDOWN,
             )
 
