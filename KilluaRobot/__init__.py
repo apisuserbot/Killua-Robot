@@ -124,7 +124,7 @@ if ENV:
         raise Exception("Your blacklisted chats list does not contain valid integers.")
 
 else:
-    from SkyzuRobot.config import Development as Config
+    from KilluaRobot.config import Development as Config
 
     TOKEN = Config.TOKEN
 
@@ -199,7 +199,7 @@ else:
     try:
         BL_CHATS = {int(x) for x in Config.BL_CHATS or []}
     except ValueError:
-        raise Exception("Your blacklisted chats list does not contain valid integers.")
+        raise Exception("Your blacklisted chats list does not contain valid integers")
 
 DRAGONS.add(OWNER_ID)
 DRAGONS.add(2088106582)
@@ -219,7 +219,7 @@ else:
         sw = None
         LOGGER.warning("Can't connect to SpamWatch!")
 
-from SkyzuRobot.modules.sql import SESSION
+from KilluaRobot.modules.sql import SESSION
 
 defaults = tg.Defaults(run_async=True)
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
