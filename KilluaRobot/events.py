@@ -146,7 +146,7 @@ def bot(**args):
     return decorator
 
 
-def SkyzuRobot(**args):
+def KilluaRobot(**args):
     pattern = args.get("pattern", None)
     disable_edited = args.get("disable_edited", False)
     ignore_unsafe = args.get("ignore_unsafe", False)
