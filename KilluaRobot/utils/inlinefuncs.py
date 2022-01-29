@@ -122,7 +122,7 @@ async def alive_function(answers):
     )
 
     msg = f"""
-**[Killua-Robot 😼](https://t.me/TheKilluaRobot) Management**
+[Killua-Robot 😼](https://t.me/TheKilluaRobot) **Management**
 **✥ MainBot :** `{bot_state}`
 **✥ UserBot :** `{ubot_state}`
 **✥ Python :** `{pyver.split()[0]}`
@@ -134,7 +134,7 @@ async def alive_function(answers):
     answers.append(
         InlineQueryResultArticle(
             title="Alive",
-            description="Check Bot Stats",
+            description="Check Bot Stats Here",
             thumb_url="https://telegra.ph/file/84642825ab5ca1aad55e1.jpg",
             input_message_content=InputTextMessageContent(
                 msg, disable_web_page_preview=True
