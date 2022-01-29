@@ -22,22 +22,22 @@ from pyrogram.types import (CallbackQuery,
                             InputTextMessageContent)
 from search_engine_parser import GoogleSearch
 
-from SkyzuRobot import (
+from KilluaRobot import (
     DEV_USERS,
     EVENT_LOGS, 
     BOT_USERNAME,
     ubot2,
 )
-from SkyzuRobot import pbot as app 
-from SkyzuRobot import arq
-from SkyzuRobot.services.keyboard import Ikb
-from SkyzuRobot.utils.pluginhelper import convert_seconds_to_minutes as time_convert, fetch
-from SkyzuRobot.services.tasks import _get_tasks_text, all_tasks, rm_task
-from SkyzuRobot.services.types import InlineQueryResultCachedDocument
-from SkyzuRobot.modules.info import get_chat_info, get_user_info
-from SkyzuRobot.modules.music import download_youtube_audio
-from SkyzuRobot.utils.functions import test_speedtest
-from SkyzuRobot.utils.pastebin import paste
+from KilluaRobot import pbot as app 
+from KilluaRobot import arq
+from KilluaRobot.services.keyboard import Ikb
+from KilluaRobot.utils.pluginhelper import convert_seconds_to_minutes as time_convert, fetch
+from KilluaRobot.services.tasks import _get_tasks_text, all_tasks, rm_task
+from KilluaRobot.services.types import InlineQueryResultCachedDocument
+from KilluaRobot.modules.info import get_chat_info, get_user_info
+from KilluaRobot.modules.music import download_youtube_audio
+from KilluaRobot.utils.functions import test_speedtest
+from KilluaRobot.utils.pastebin import paste
 
 MESSAGE_DUMP_CHAT = EVENT_LOGS
 
@@ -102,7 +102,7 @@ async def inline_help_func(__HELP__):
             input_message_content=InputTextMessageContent(
                 "**__Click A Button To Get Started.__**"
             ),
-            thumb_url="https://telegra.ph/file/84642825ab5ca1aad55e1.jpg",
+            thumb_url="https://telegra.ph/file/86819c7878e760e687ed0.jpg",
             reply_markup=buttons,
         ),
     ]
@@ -122,14 +122,14 @@ async def alive_function(answers):
     )
 
     msg = f"""
-**[Joker Robot ✘](https://t.me/JokerXRobot):**
+**[Killua-Robot](https://t.me/TheKilluaRobot):**
 **✥ MainBot:** `{bot_state}`
 **✥ UserBot:** `{ubot_state}`
 **✥ Python:** `{pyver.split()[0]}`
 **✥ Pyrogram:** `{pyrover}`
 **✥ MongoDB:** `{mongover}`
 **✥ Platform:** `{sys.platform}`
-**✥ Profiles:** [BOT](t.me/{BOT_USERNAME}) | [OWNER](t.me/FJ_GAMING)
+**✥ Profiles:** [BOT](t.me/{BOT_USERNAME}) | [OWNER](t.me/tzypis)
 """
     answers.append(
         InlineQueryResultArticle(
