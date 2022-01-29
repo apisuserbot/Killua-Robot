@@ -98,9 +98,9 @@ async def inline_help_func(__HELP__):
     answerss = [
         InlineQueryResultArticle(
             title="Inline Commands",
-            description="Help Related To Inline Usage.",
+            description="Help Related To Inline Usage",
             input_message_content=InputTextMessageContent(
-                "**__Click A Button To Get Started.__**"
+                "**__Click A Button To Get Started Killua__**"
             ),
             thumb_url="https://telegra.ph/file/86819c7878e760e687ed0.jpg",
             reply_markup=buttons,
@@ -115,21 +115,21 @@ async def alive_function(answers):
     bot_state = "Dead" if not await app.get_me() else "Alive"
     ubot_state = "Dead" if not await ubot2.get_me() else "Alive"
     buttons.add(
-        InlineKeyboardButton("Main bot", url="https://t.me/JokerXRobot"),
+        InlineKeyboardButton("Main Bot", url="https://t.me/TheKilluaRobot"),
         InlineKeyboardButton(
             "Go Inline!", switch_inline_query_current_chat=""
         ),
     )
 
     msg = f"""
-**[Killua-Robot](https://t.me/TheKilluaRobot):**
-**✥ MainBot:** `{bot_state}`
-**✥ UserBot:** `{ubot_state}`
-**✥ Python:** `{pyver.split()[0]}`
-**✥ Pyrogram:** `{pyrover}`
-**✥ MongoDB:** `{mongover}`
-**✥ Platform:** `{sys.platform}`
-**✥ Profiles:** [BOT](t.me/{BOT_USERNAME}) | [OWNER](t.me/tzypis)
+**[Killua-Robot 😼](https://t.me/TheKilluaRobot) Management**
+**✥ MainBot :** `{bot_state}`
+**✥ UserBot :** `{ubot_state}`
+**✥ Python :** `{pyver.split()[0]}`
+**✥ Pyrogram :** `{pyrover}`
+**✥ MongoDB :** `{mongover}`
+**✥ Platform :** `{sys.platform}`
+**✥ Profiles :** [BOT](t.me/{BOT_USERNAME}) | [OWNER](t.me/tzypis)
 """
     answers.append(
         InlineQueryResultArticle(
@@ -159,14 +159,14 @@ async def translate_func(answers, lang, tex):
     result = result.result
     msg = f"""
 __**Translated from {result.src} to {result.dest}**__
-**INPUT:**
+**INPUT :**
 {tex}
-**OUTPUT:**
+**OUTPUT :**
 {result.translatedText}"""
     answers.extend(
         [
             InlineQueryResultArticle(
-                title=f"Translated from {result.src} to {result.dest}.",
+                title=f"Translated from {result.src} to {result.dest}",
                 description=result.translatedText,
                 input_message_content=InputTextMessageContent(msg),
             ),
@@ -196,9 +196,9 @@ async def urban_func(answers, text):
     for i in results:
         clean = lambda x: re_sub(r"[\[\]]", "", x)
         msg = f"""
-**Query:** {text}
-**Definition:** __{clean(i.definition)}__
-**Example:** __{clean(i.example)}__"""
+**Query :** {text}
+**Definition :** __{clean(i.definition)}__
+**Example :** __{clean(i.example)}__"""
 
         answers.append(
             InlineQueryResultArticle(
@@ -280,14 +280,14 @@ async def torrent_func(answers, text):
         upload_date = i.uploaded
         magnet = i.magnet
         caption = f"""
-**Title:** __{title}__
-**Size:** __{size}__
-**Seeds:** __{seeds}__
-**Leechs:** __{leechs}__
-**Uploaded:** __{upload_date}__
-**Magnet:** `{magnet}`"""
+**Title :** __{title}__
+**Size :** __{size}__
+**Seeds :** __{seeds}__
+**Leechs :** __{leechs}__
+**Uploaded :** __{upload_date}__
+**Magnet :** `{magnet}`"""
 
-        description = f"{size} | {upload_date} | Seeds: {seeds}"
+        description = f"{size} | {upload_date} | Seeds : {seeds}"
         answers.append(
             InlineQueryResultArticle(
                 title=title,
@@ -318,12 +318,12 @@ async def youtube_func(answers, text):
         video_url = f"https://youtube.com{i.url_suffix}"
         buttons.add(InlineKeyboardButton("Watch", url=video_url))
         caption = f"""
-**Title:** {i.title}
-**Views:** {i.views}
-**Channel:** {i.channel}
-**Duration:** {i.duration}
-**Uploaded:** {i.publish_time}
-**Description:** {i.long_desc}"""
+**Title :** {i.title}
+**Views :** {i.views}
+**Channel :** {i.channel}
+**Duration :** {i.duration}
+**Uploaded :** {i.publish_time}
+**Description :** {i.long_desc}"""
         description = (
             f"{i.views} | {i.channel} | {i.duration} | {i.publish_time}"
         )
@@ -358,7 +358,7 @@ async def lyrics_func(answers, text):
     artist = song[1]
     if len(lyrics) > 4095:
         lyrics = await paste(lyrics)
-        lyrics = f"**LYRICS_TOO_LONG:** [URL]({lyrics})"
+        lyrics = f"**LYRICS_TOO_LONG :** [URL]({lyrics})"
 
     msg = f"**__{lyrics}__**"
 
@@ -413,11 +413,11 @@ async def tg_search_func(answers, text, user_id):
             else "NO NAME"
         )
         caption = f"""
-**Query:** {text}
-**Name:** {str(name)} [`{message.from_user.id}`]
-**Chat:** {str(message.chat.title)} [`{message.chat.id}`]
-**Date:** {ctime(message.date)}
-**Text:** >>
+**Query :** {text}
+**Name :** {str(name)} [`{message.from_user.id}`]
+**Chat :** {str(message.chat.title)} [`{message.chat.id}`]
+**Date :** {ctime(message.date)}
+**Text :** >>
 {message.text.markdown if message.text else message.caption if message.caption else '[NO_TEXT]'}
 """
         result = InlineQueryResultArticle(
@@ -448,7 +448,7 @@ async def music_inline_func(answers, query):
         answers.append(
             InlineQueryResultArticle(
                 title="ERROR",
-                description="Click Here To Know More.",
+                description="Click Here To Know More",
                 input_message_content=InputTextMessageContent(
                     msg, disable_web_page_preview=True
                 ),
@@ -528,11 +528,11 @@ async def saavn_func(answers, text):
         buttons_list.append(buttons)
         duration = await time_convert(i.duration)
         caption = f"""
-**Title:** {i.song}
-**Album:** {i.album}
-**Duration:** {duration}
-**Release:** {i.year}
-**Singers:** {i.singers}"""
+**Title :** {i.song}
+**Album :** {i.album}
+**Duration :** {duration}
+**Release :** {i.year}
+**Singers :** {i.singers}"""
         description = f"{i.album} | {duration} " + f"| {i.singers} ({i.year})"
         answers.append(
             InlineQueryResultArticle(
@@ -561,9 +561,9 @@ async def wiki_func(answers, text):
         return answers
     data = data.result
     msg = f"""
-**QUERY:**
+**QUERY :**
 {data.title}
-**ANSWER:**
+**ANSWER :**
 __{data.answer}__"""
     answers.append(
         InlineQueryResultArticle(
@@ -615,12 +615,12 @@ async def test_speedtest_cq(_, cq):
     loop = asyncio.get_running_loop()
     download, upload, info = await loop.run_in_executor(None, test_speedtest)
     msg = f"""
-**Download:** `{download}`
-**Upload:** `{upload}`
-**Latency:** `{info['latency']} ms`
-**Country:** `{info['country']} [{info['cc']}]`
-**Latitude:** `{info['lat']}`
-**Longitude:** `{info['lon']}`
+**Download :** `{download}`
+**Upload :** `{upload}`
+**Latency :** `{info['latency']} ms`
+**Country :** `{info['country']} [{info['cc']}]`
+**Latitude :** `{info['lat']}`
+**Longitude :** `{info['lon']}`
 """
     await app.edit_inline_text(inline_message_id, msg)
 
@@ -729,11 +729,11 @@ async def tmdb_func(answers, query):
         description = result.overview[0:900] if result.overview else "None"
         caption = f"""
 **{result.title}**
-**Type:** {result.type}
-**Rating:** {result.rating}
-**Genre:** {genre}
-**Release Date:** {result.releaseDate}
-**Description:** __{description}__
+**Type :** {result.type}
+**Rating :** {result.rating}
+**Genre :** {genre}
+**Release Date :** {result.releaseDate}
+**Description :** __{description}__
 """
         buttons = InlineKeyboard(row_width=1)
         buttons.add(
@@ -795,15 +795,15 @@ async def pokedexinfo(answers, pokemon):
         InlineKeyboardButton("Pokedex", switch_inline_query_current_chat="pokedex")
     )
     caption = f"""
-**Pokemon:** `{result['name']}`
-**Pokedex:** `{result['id']}`
-**Type:** `{result['type']}`
-**Abilities:** `{result['abilities']}`
-**Height:** `{result['height']}`
-**Weight:** `{result['weight']}`
-**Gender:** `{result['gender']}`
-**Stats:** `{result['stats']}`
-**Description:** `{result['description']}`"""
+**Pokemon :** `{result['name']}`
+**Pokedex :** `{result['id']}`
+**Type :** `{result['type']}`
+**Abilities :** `{result['abilities']}`
+**Height :** `{result['height']}`
+**Weight :** `{result['weight']}`
+**Gender :** `{result['gender']}`
+**Stats :** `{result['stats']}`
+**Description :** `{result['description']}`"""
     answers.append(
         InlineQueryResultPhoto(
             photo_url=f"https://img.pokemondb.net/artwork/large/{pokemon}.jpg",
