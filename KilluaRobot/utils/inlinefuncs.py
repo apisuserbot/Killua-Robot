@@ -102,7 +102,7 @@ async def inline_help_func(__HELP__):
             input_message_content=InputTextMessageContent(
                 "**__Click A Button To Get Started Killua__**"
             ),
-            thumb_url="https://telegra.ph/file/86819c7878e760e687ed0.jpg",
+            thumb_url="https://telegra.ph/file/e96eb51fbaf1123d7e27b.jpg",
             reply_markup=buttons,
         ),
     ]
@@ -115,7 +115,7 @@ async def alive_function(answers):
     bot_state = "Dead" if not await app.get_me() else "Alive"
     ubot_state = "Dead" if not await ubot2.get_me() else "Alive"
     buttons.add(
-        InlineKeyboardButton("Main bot", url="https://t.me/TheKilluaRobot"),
+        InlineKeyboardButton("Main Bot", url="https://t.me/TheKilluaRobot"),
         InlineKeyboardButton(
             "Go Inline!", switch_inline_query_current_chat=""
         ),
@@ -135,7 +135,7 @@ async def alive_function(answers):
         InlineQueryResultArticle(
             title="Alive",
             description="Check Bot Stats Here",
-            thumb_url="https://telegra.ph/file/84642825ab5ca1aad55e1.jpg",
+            thumb_url="https://telegra.ph/file/e96eb51fbaf1123d7e27b.jpg",
             input_message_content=InputTextMessageContent(
                 msg, disable_web_page_preview=True
             ),
