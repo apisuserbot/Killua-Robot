@@ -7,13 +7,13 @@ from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.errors import UserNotParticipantError
 
-from KilluaRobot import telethn as Client
+from KilluaRobot.events import register
 
 spam_chats = []
 
 
-@Client.on(events.NewMessage(pattern="^/all ?(.*)"))
-@Client.on(events.NewMessage(pattern="^@all ?(.*)"))
+@register(pattern="^/all ?(.*)"))
+@register(pattern="^@all ?(.*)"))
 async def mentionall(event):
     chat_id = event.chat_id
     if event.is_private:
@@ -72,7 +72,7 @@ async def mentionall(event):
         pass
 
 
-@Client.on(events.NewMessage(pattern="^/cancel$"))
+@register(pattern="^/cancel$"))
 async def cancel_spam(event):
     if not event.chat_id in spam_chats:
         return await event.respond("There is no proccess on going...")
