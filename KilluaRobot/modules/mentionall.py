@@ -12,8 +12,8 @@ from KilluaRobot.events import register
 spam_chats = []
 
 
-@register(pattern="^/all ?(.*)"))
-@register(pattern="^@all ?(.*)"))
+@register(pattern="/all"))
+@register(pattern="@all"))
 async def mentionall(event):
     chat_id = event.chat_id
     if event.is_private:
@@ -72,7 +72,7 @@ async def mentionall(event):
         pass
 
 
-@register(pattern="^/cancel$"))
+@register(pattern="^/cancel"))
 async def cancel_spam(event):
     if not event.chat_id in spam_chats:
         return await event.respond("There is no proccess on going...")
