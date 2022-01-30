@@ -24,10 +24,12 @@
   </details><br>
 
   <details><summary><b> Credit </b></summary> <br />
-• <b> Credit Manage </b>
+#### Credit Manage
+
   ```
   Credit of repository bot manage!
   - Killua-Robot
   ```
-• <b> Credit Developer </b>
+
+### Credit Developer
   </details><br>   
