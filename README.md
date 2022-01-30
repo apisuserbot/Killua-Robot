@@ -24,6 +24,7 @@
   </details><br>
 
   <details><summary><b> Credit </b></summary> <br />
+
 #### Credit Manage
 
   ```
@@ -32,4 +33,9 @@
   ```
 
 ### Credit Developer
+
+*   [Apis](https://github.com/apisuserbot)
+*   [Fariz](https://github.com/fjgaming212)
+*   [Ridho](https://github.com/ridho17-ind)
+*   [Axel](https://github.com/unknownkz)
   </details><br>   
