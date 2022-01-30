@@ -16,9 +16,18 @@
 </details>
 
   <details><summary><b> Deployment </b></summary> <br />
-    <p> Deploy using heroku, and don't forget to register first. </p>
+    <p> Deploy using heroku, and don't forget to register first </p>
     <p>👇🏻 Click </p>
     <p align="left">
        <a href="https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2Fapisuserbot%2FKillua-Robot"><img src="https://img.shields.io/badge/deploy_to_heroku-white?style=for-the-badge&logo=heroku.cd" alt="go_heroku" /></a>
     </p>
   </details><br>
+
+  <details><summary><b> Credit </b></summary> <br />
+• <b> Credit Manage </b>
+  ```
+  Credit of repository bot manage!
+  - Killua-Robot
+  ```
+• <b> Credit Developer </b>
+  </details><br>   
