@@ -2,7 +2,10 @@
   <img src="https://telegra.ph/file/86819c7878e760e687ed0.jpg">
 </p>
 
-# Killua-Robot
+<h3><p align="center">
+   Killua-Robot
+</h3></p>
+
 ## <h3 align="left"> About </h3>
 
 
