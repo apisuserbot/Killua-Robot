@@ -1,4 +1,5 @@
 future
+wheel
 emoji
 lxml
 wget
