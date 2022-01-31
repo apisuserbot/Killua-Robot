@@ -23,7 +23,10 @@
     </p>
   </details><br>
 
-  <details><summary><b> Credit </b></summary> <br />
+
+# <h3 align="left"> (C) Credits </h3>
+
+  <details><summary><b> Click here </b></summary> <br />
 
 #### Credit Manage
 
