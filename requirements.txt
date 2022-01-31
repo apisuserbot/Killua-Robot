@@ -1,5 +1,6 @@
-future
 wheel
+future
+setuptools
 emoji
 lxml
 wget
