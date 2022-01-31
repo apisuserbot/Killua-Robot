@@ -3,10 +3,17 @@ FROM python:3.9.7-slim-buster
 
 WORKDIR /KilluaRobot/
 
-RUN apt-get update && apt-get upgrade -y
+RUN apt-get -qq update && apt-get -qq upgrade -y
 RUN apt-get -y install git
 RUN python3.9 -m pip install -U pip
-RUN apt-get install -y wget python3-pip curl bash neofetch ffmpeg software-properties-common
+RUN apt-get -qq install -y \
+    wget \
+    python3-pip \
+    curl \
+    bash \
+    neofetch \
+    ffmpeg \
+    software-properties-common
 
 COPY requirements.txt .
 
