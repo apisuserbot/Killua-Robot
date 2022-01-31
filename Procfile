@@ -1,1 +1,1 @@
-worker: python3 -m KilluaRobot
+worker: bash gagalmoveon
