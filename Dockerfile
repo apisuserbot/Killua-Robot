@@ -1,9 +1,11 @@
 FROM debian:11
 FROM python:3.9.7-slim-buster
 
-RUN apt-get -qq update && apt-get -qq upgrade -y
+RUN python3.9 -m pip install -U ez_setup
 RUN python3.9 -m pip install -U pip
 RUN python3.9 -m pip install -U setuptools
+
+RUN apt-get -qq update && apt-get -qq upgrade -y
 RUN apt-get -qq install -y \
     git \
     wget \
