@@ -408,9 +408,7 @@ def Killua_about_callback(update, context):
                         ),
                     ],
                     [
-                        InlineKeyboardButton(
-                            text="Source", callback_data="source_"
-                        ),
+                        InlineKeyboardButton(text="Source", callback_data="source_"),
                     ],
                     [
                         InlineKeyboardButton(
