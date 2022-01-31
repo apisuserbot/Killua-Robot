@@ -17,8 +17,7 @@ RUN apt-get -qq install -y \
 
 COPY requirements.txt .
 
-RUN pip3 install wheel
-RUN pip3 install -U -r requirements.txt
+RUN pip3 install --no-cache-dir -U -r requirements.txt
 
 COPY . .
 CMD ["python3.9", "-m", "KilluaRobot"]
