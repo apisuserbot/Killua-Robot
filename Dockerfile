@@ -18,4 +18,6 @@ WORKDIR /usr/src/KilluaRobot
 RUN pip3 install --no-cache-dir -U -r requirements.txt
 
 COPY . .
-CMD ["python3.9", "-m", "KilluaRobot"]
+
+RUN chmod a+x gagalmoveon
+CMD ["./gagalmoveon"]
