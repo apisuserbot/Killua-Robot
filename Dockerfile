@@ -1,12 +1,10 @@
 FROM debian:11
 FROM python:3.9.7-slim-buster
 
-WORKDIR /KilluaRobot/
-
 RUN apt-get -qq update && apt-get -qq upgrade -y
-RUN apt-get -y install git
 RUN python3.9 -m pip install -U pip
 RUN apt-get -qq install -y \
+    git \
     wget \
     python3-pip \
     curl \
@@ -15,7 +13,8 @@ RUN apt-get -qq install -y \
     ffmpeg \
     software-properties-common
 
-COPY requirements.txt .
+RUN git clone https://github.com/apisuserbot/Killua-Robot.git /usr/src/KilluaRobot
+WORKDIR /usr/src/KilluaRobot
 
 RUN pip3 install --no-cache-dir -U -r requirements.txt
 
