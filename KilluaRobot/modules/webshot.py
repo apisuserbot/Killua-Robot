@@ -21,7 +21,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from KilluaRobot import pbot as app
-from KilluaRobot.utils.errors import capture_err
+from KilluaRobot.uputils.errors import capture_err
 
 __mod_name__ = "Webshot​"
 
