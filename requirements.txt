@@ -1,5 +1,7 @@
 wheel
 future
+ez_setup
+pip
 setuptools
 emoji
 lxml
