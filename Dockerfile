@@ -1,7 +1,7 @@
 FROM debian:11
 FROM python:3.9.7-slim-buster
 
-RUN git clone https://github.com/apisuserbot/Killua-Robot.git /KilluaRobot/
+RUN git clone https://github.com/apisuserbot/Killua-Robot.git /KilluaRobot
 WORKDIR /KilluaRobot/
 
 RUN apt-get -qq update && apt-get -qq upgrade -y
