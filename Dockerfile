@@ -1,10 +1,6 @@
 FROM debian:11
 FROM python:3.9.7-slim-buster
 
-RUN python3.9 -m pip install -U ez_setup
-RUN python3.9 -m pip install -U pip
-RUN python3.9 -m pip install -U setuptools
-
 RUN apt-get -qq update && apt-get -qq upgrade -y
 RUN apt-get -qq install -y \
     git \
@@ -18,7 +14,6 @@ RUN apt-get -qq install -y \
 
 RUN git clone https://github.com/apisuserbot/Killua-Robot.git /usr/src/KilluaRobot
 WORKDIR /usr/src/KilluaRobot
-
 
 RUN pip3 install --no-cache-dir -U -r requirements.txt
 
