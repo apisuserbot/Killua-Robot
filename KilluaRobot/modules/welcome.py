@@ -265,7 +265,7 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
                         first=escape_markdown(first_name)
                     )
 
-if new_mem.last_name:
+                if new_mem.last_name:
                     fullname = escape_markdown(f"{first_name} {new_mem.last_name}")
                 else:
                     fullname = escape_markdown(first_name)
