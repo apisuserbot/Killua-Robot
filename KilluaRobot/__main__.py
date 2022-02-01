@@ -459,7 +459,7 @@ def Killua_about_callback(update, context):
             f"\n\nYou can also set buttons for notes and filters (refer help menu)",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="Skyzu_")]]
+                [[InlineKeyboardButton(text="Go Back", callback_data="Killua_")]]
             ),
         )
     elif query.data == "Killua_support":
@@ -579,7 +579,7 @@ def get_help(update: Update, context: CallbackContext):
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
         text = (
-            "Here is the available help for the *{}* module:\n".format(
+            "Here is the available help for the *{}* module :\n".format(
                 HELPABLE[module].__mod_name__
             )
             + HELPABLE[module].__help__
