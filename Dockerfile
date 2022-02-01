@@ -10,7 +10,6 @@ RUN apt-get -qq install -y \
     bash \
     neofetch \
     ffmpeg \
-    nltk \
     software-properties-common
 
 RUN git clone https://github.com/apisuserbot/Killua-Robot.git /usr/src/KilluaRobot
