@@ -24,10 +24,9 @@ StartTime = time.time()
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     handlers=[logging.FileHandler("log.txt"), logging.StreamHandler()],
-    level=logging.INFO,
+    level=INFO,
 )
-
-LOGGER = logging.getLogger(__name__)
+LOGGER = getLogger(__name__)
 
 # if version < 3.6, stop bot.
 if sys.version_info[0] < 3 or sys.version_info[1] < 6:
