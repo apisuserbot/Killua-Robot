@@ -34,7 +34,7 @@ regex
 bleach
 wikipedia
 markdown2>=2.4.0
-telethon
+Telethon
 telegraph
 heroku3
 spamwatch
