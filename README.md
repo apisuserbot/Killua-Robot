@@ -30,12 +30,6 @@
        <p> 👇🏻 Click </p>
        <a href="https://replit.com/@KENZO404/Codex-strGen?v=1"><img src="https://img.shields.io/badge/generate_string-via_replit-white?style=for-the-badge&logo=repl.it" alt="generate_string" /></a>
     </p>
-    <br>
-    <p align="left">
-       <i> (Pyrogram & Telethon) Using API_ID & API_HASH </i>
-       <p> 👇🏻 Click </p>
-       <a href="https://replit.com/@KENZO404/CodexString?v=1"><img src="https://img.shields.io/badge/run-string__session.py-blue?style=for-the-badge&logo=repl.it" alt="generate_string" /></a>
-    </p>
   </details>
   <details><summary><b> Deployment </b></summary> <br />
     <p> Deploy using heroku, and don't forget to register first </p>
