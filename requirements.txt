@@ -23,7 +23,6 @@ ffmpeg-python
 spongemock
 zalgo-text
 geopy
-nltk
 psutil
 aiohttp>=2.2.5
 Pillow
@@ -87,3 +86,4 @@ pendulum
 fuzzysearch
 img2pdf
 multicolorcaptcha
+git+https://github.com/nltk/nltk
