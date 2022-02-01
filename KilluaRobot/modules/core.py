@@ -10,7 +10,7 @@ from KilluaRobot import TEMP_DOWNLOAD_DIRECTORY as path
 from KilluaRobot import TEMP_DOWNLOAD_DIRECTORY
 from datetime import datetime
 
-water = "./KilluaRobot/resources/Skyzu.png"
+water = "./KilluaRobot/resources/killua.png"
 client = tbot
 
 
