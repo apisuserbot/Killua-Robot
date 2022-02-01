@@ -24,7 +24,7 @@ StartTime = time.time()
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     handlers=[logging.FileHandler("log.txt"), logging.StreamHandler()],
-    level=INFO,
+    level=logging.INFO,
 )
 LOGGER = getLogger(__name__)
 
