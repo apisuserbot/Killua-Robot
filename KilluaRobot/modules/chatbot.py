@@ -28,7 +28,7 @@ from telegram.ext import (
 from telegram.error import BadRequest, RetryAfter, Unauthorized
 from telegram.utils.helpers import mention_html, mention_markdown, escape_markdown
 
-import SkyzuRobot.modules.sql.chatbot_sql as sql
+import KilluaRobot.modules.sql.chatbot_sql as sql
 from KilluaRobot.modules.helper_funcs.filters import CustomFilters
 from KilluaRobot.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
 from KilluaRobot import dispatcher, updater, SUPPORT_CHAT
