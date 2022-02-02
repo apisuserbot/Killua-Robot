@@ -9,7 +9,7 @@ BASE = declarative_base()
 
 
 def start() -> scoped_session:
-    engine = create_engine(DATABASE_URL, client_encoding="utf8")
+    engine = create_engine(DATABASE_URL)
     BASE.metadata.bind = engine
     BASE.metadata.create_all(engine)
     return scoped_session(sessionmaker(bind=engine, autoflush=False))
