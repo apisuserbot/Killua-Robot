@@ -1,7 +1,11 @@
-FROM debian:11
-FROM python:3.9.7-slim-buster
+FROM ubuntu:xenial-20210804
+FROM debian:bookworm-20220125-slim
+FROM python:3.10.2-slim-buster
 
-RUN apt-get -qq update && apt-get -qq upgrade -y
+# Install Dependencies
+RUN apt-get update -y
+RUN apt-get install g++ gcc libxml2 libxslt-dev -y
+
 RUN apt-get -qq install -y \
     git \
     wget \
