@@ -1,5 +1,5 @@
 import sys
-from my_web_framework import get_current_request, on_request_end
+from my_web_framework import get_current_request
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, scoped_session
