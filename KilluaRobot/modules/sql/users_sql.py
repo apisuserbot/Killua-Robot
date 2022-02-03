@@ -1,6 +1,6 @@
 import threading
 
-from KilluaRobot import dispatcher
+from KilluaRobot import dispatcher, BOT_USERNAME
 from KilluaRobot.modules.sql import BASE, SESSION
 from sqlalchemy import (
     Column,
@@ -18,7 +18,7 @@ class Users(BASE):
     user_id = Column(Integer, primary_key=True)
     username = Column(UnicodeText)
 
-    def __init__(self, user_id, username=None):
+    def __init__(self, user_id, username=BOT_USERNAME):
         self.user_id = user_id
         self.username = username
 
