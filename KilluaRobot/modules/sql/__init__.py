@@ -3,15 +3,24 @@ import datetime
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, scoped_session
-from KilluaRobot import DATABASE_URL
+from KilluaRobot import DATABASE_URL, LOGGER as Unknown
 
-BASE = declarative_base()
 
+if DATABASE_URL and DATABASE_URL.startswith("postgres://"):
+    DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
 
 def start() -> scoped_session:
     engine = create_engine(DATABASE_URL)
+    Unknown.info("[PostgreSQL] Connecting to database...")
     BASE.metadata.bind = engine
     BASE.metadata.create_all(engine)
     return scoped_session(sessionmaker(bind=engine, autoflush=False))
 
-SESSION = start()
+BASE = declarative_base()
+try:
+    SESSION = start()
+except Exception as e:
+    Unknown.exception(f'[PostgreSQL] Failed to connect due to {e}')
+    exit()
+   
+Unknown.info("[PostgreSQL] Connection successful, session started.")
