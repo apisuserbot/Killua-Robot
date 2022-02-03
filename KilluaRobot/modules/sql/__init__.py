@@ -1,5 +1,4 @@
 import sys
-from my_web_framework import get_current_request
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, scoped_session
@@ -15,7 +14,7 @@ def start() -> scoped_session:
     BASE = declarative_base()
     BASE.metadata.bind = engine
     BASE.metadata.create_all(engine, checkfirst=True)
-    return scoped_session(sessionmaker(bind=engine, autoflush=False), scopefunc=get_current_request)
+    return scoped_session(sessionmaker(bind=engine, autoflush=False))
 
 try:
     SESSION = start()
