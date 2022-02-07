@@ -1,8 +1,10 @@
+try:
+   from KilluaRobot.modules.sql import BASE, SESSION
+except ImportError:
+    raise AttributeError
+
 import threading
-
 from sqlalchemy import func, distinct, Column, String, UnicodeText, Integer
-
-from KilluaRobot.modules.sql import SESSION, BASE
 
 
 class BlackListFilters(BASE):
