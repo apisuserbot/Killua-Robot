@@ -1,5 +1,9 @@
+try:
+   from KilluaRobot.modules.sql import BASE, SESSION
+except ImportError:
+    raise AttributeError
+
 from sqlalchemy import Boolean, Column, Integer, String, UnicodeText
-from KilluaRobot.modules.sql import BASE, SESSION
 
 
 class Nightmode(BASE):
