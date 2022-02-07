@@ -1,8 +1,11 @@
-import threading
+try:
+   from KilluaRobot.modules.sql import BASE, SESSION
+except ImportError:
+    raise AttributeError
 
+import threading
 from sqlalchemy import String, Column, Integer, UnicodeText
 
-from KilluaRobot.modules.sql import SESSION, BASE
 
 DEF_COUNT = 1
 DEF_LIMIT = 0
