@@ -1,6 +1,10 @@
+try:
+   from KilluaRobot.modules.sql import BASE, SESSION
+except ImportError:
+    raise AttributeError
+
 import threading
 from sqlalchemy import Column, String
-from KilluaRobot.modules.sql import BASE, SESSION
 
 #   |----------------------------------|
 #   |  Test Module by @EverythingSuckz |
