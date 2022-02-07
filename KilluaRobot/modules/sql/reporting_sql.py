@@ -1,7 +1,10 @@
+try:
+   from KilluaRobot.modules.sql import BASE, SESSION
+except ImportError:
+    raise AttributeError
+
 import threading
 from typing import Union
-
-from KilluaRobot.modules.sql import BASE, SESSION
 from sqlalchemy import Boolean, Column, Integer, String
 
 
