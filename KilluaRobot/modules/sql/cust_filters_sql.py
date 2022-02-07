@@ -1,9 +1,11 @@
+try:
+   from KilluaRobot.modules.helper_funcs.msg_types import Types
+   from KilluaRobot.modules.sql import BASE, SESSION
+except ImportError:
+    raise AttributeError
+
 import threading
-
 from sqlalchemy import Column, String, UnicodeText, Boolean, Integer, distinct, func
-
-from KilluaRobot.modules.helper_funcs.msg_types import Types
-from KilluaRobot.modules.sql import BASE, SESSION
 
 
 class CustomFilters(BASE):
