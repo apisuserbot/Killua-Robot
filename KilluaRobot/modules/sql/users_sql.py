@@ -1,7 +1,10 @@
-import threading
+try:
+   from KilluaRobot.modules.sql import BASE, SESSION
+   from KilluaRobot import dispatcher
+except ImportError:
+    raise AttributeError
 
-from KilluaRobot import dispatcher
-from KilluaRobot.modules.sql import BASE, SESSION
+import threading
 from sqlalchemy import (
     Column,
     ForeignKey,
