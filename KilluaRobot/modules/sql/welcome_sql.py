@@ -1,9 +1,12 @@
+try:
+   from KilluaRobot.modules.sql import BASE, SESSION
+   from KilluaRobot.modules.helper_funcs.msg_types import Types
+except ImportError:
+    raise AttributeError
+
 import random
 import threading
 from typing import Union
-
-from KilluaRobot.modules.helper_funcs.msg_types import Types
-from KilluaRobot.modules.sql import BASE, SESSION
 from sqlalchemy import Boolean, Column, Integer, String, UnicodeText
 from sqlalchemy.sql.sqltypes import BigInteger
 
