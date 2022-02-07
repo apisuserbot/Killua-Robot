@@ -1,9 +1,10 @@
-# New chat added -> setup permissions
+try:
+   from KilluaRobot.modules.sql import BASE, SESSION
+except ImportError:
+    raise AttributeError
+
 import threading
-
 from sqlalchemy import Column, String, Boolean
-
-from KilluaRobot.modules.sql import SESSION, BASE
 
 
 class Permissions(BASE):
