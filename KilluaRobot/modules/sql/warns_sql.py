@@ -1,6 +1,9 @@
-import threading
+try:
+   from KilluaRobot.modules.sql import BASE, SESSION
+except ImportError:
+    raise AttributeError
 
-from KilluaRobot.modules.sql import BASE, SESSION
+import threading
 from sqlalchemy import Boolean, Column, Integer, String, UnicodeText, distinct, func
 from sqlalchemy.dialects import postgresql
 from sqlalchemy.sql.sqltypes import BigInteger
