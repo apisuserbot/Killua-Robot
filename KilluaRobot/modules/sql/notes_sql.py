@@ -1,8 +1,10 @@
-# Note: chat_id's are stored as strings because the int is too large to be stored in a PSQL database.
-import threading
+try:
+   from KilluaRobot.modules.helper_funcs.msg_types import Types
+   from KilluaRobot.modules.sql import BASE, SESSION
+except ImportError:
+    raise AttributeError
 
-from KilluaRobot.modules.helper_funcs.msg_types import Types
-from KilluaRobot.modules.sql import BASE, SESSION
+import threading
 from sqlalchemy import Boolean, Column, Integer, String, UnicodeText, distinct, func
 
 
