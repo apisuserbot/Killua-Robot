@@ -1,10 +1,13 @@
+try:
+   from KilluaRobot.modules.sql import BASE, SESSION
+except ImportError:
+    raise AttributeError
+
 import threading
 import time
 from typing import Union
 
 from sqlalchemy import Column, String, Boolean, UnicodeText, Integer
-
-from KilluaRobot.modules.sql import SESSION, BASE
 
 
 class ChatAccessConnectionSettings(BASE):
