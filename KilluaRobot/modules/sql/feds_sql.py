@@ -1,8 +1,11 @@
+try:
+   from KilluaRobot.modules.sql import BASE, SESSION
+except ImportError:
+    raise AttributeError
+
 import ast
 import threading
-
 from KilluaRobot import dispatcher
-from KilluaRobot.modules.sql import BASE, SESSION
 from sqlalchemy import Boolean, Column, Integer, String, UnicodeText
 from telegram.error import BadRequest, Unauthorized
 
