@@ -364,7 +364,7 @@ def set_flood_mode(update, context):
     if getmode == 1:
         settypeflood = "ban"
     elif getmode == 2:
-    	settypeflood = "kick"
+        settypeflood = "kick"
     elif getmode == 3:
         settypeflood = "mute"
     elif getmode == 4:

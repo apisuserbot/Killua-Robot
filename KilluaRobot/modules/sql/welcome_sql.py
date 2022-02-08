@@ -1,6 +1,6 @@
 try:
-   from KilluaRobot.modules.sql import BASE, SESSION
-   from KilluaRobot.modules.helper_funcs.msg_types import Types
+    from KilluaRobot.modules.sql import BASE, SESSION
+    from KilluaRobot.modules.helper_funcs.msg_types import Types
 except ImportError:
     raise AttributeError
 
