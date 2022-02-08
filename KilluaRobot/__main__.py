@@ -6,7 +6,7 @@ import time
 import re
 import sys
 import traceback
-import KilluaRobot.modules.sql.users_sql as sql
+
 from sys import argv
 from typing import Optional
 from telegram import __version__ as peler
@@ -52,8 +52,8 @@ from telegram.ext import (
     MessageHandler,
 )
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
-from telegram.utils.helpers import escape_markdown
-
+from telegram.utils.helpers import (
+    escape_markdown, mention_html,
 
 def get_readable_time(seconds: int) -> str:
     count = 0
@@ -81,7 +81,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-👋🏻 *Hello {} !*
+👋🏻 Hello *{}* ! My Name is *{}*
 ────────────────────────
 ✪ I'm an anime theme bot designed to help manage your telegram group with a lot features
 
@@ -196,6 +196,11 @@ def test(update: Update, context: CallbackContext):
 
 def start(update: Update, context: CallbackContext):
     args = context.args
+    bot = context.bot
+    message = update.effective_message
+    chat = update.effective_chat
+    user = update.effective_user
+    first_name = update.effective_user.first_name
     uptime = get_readable_time((time.time() - StartTime))
     if update.effective_chat.type == "private":
         if len(args) >= 1:
@@ -236,9 +241,8 @@ def start(update: Update, context: CallbackContext):
             update.effective_message.reply_text(
                 PM_START_TEXT.format(
                     escape_markdown(first_name),
+                    escape_markdown(context.bot.first_name)
                     escape_markdown(uptime),
-                    sql.num_users(),
-                    sql.num_chats(),
                 ),
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
@@ -247,7 +251,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            f"<b>😼 Hi I'm Killua robot!</b>\n<b>✅ Started working since :</b> <code>{uptime}</code>",
+            f"<b>😼 Hi {mention_html(user.id, user.first_name)} I'm {bot.first_name} !</b>\n<b>✅ Started working since :</b> <code>{uptime}</code>",
             parse_mode=ParseMode.HTML,
         )
 
