@@ -1,6 +1,6 @@
 try:
-   from KilluaRobot.modules.sql import BASE, SESSION
-   from KilluaRobot import dispatcher
+    from KilluaRobot.modules.sql import BASE, SESSION
+    from KilluaRobot import dispatcher
 except ImportError:
     raise AttributeError
 
