@@ -257,8 +257,8 @@ def connect_chat(update, context):
                 update.effective_message,
                 "Connection to this chat is not allowed!",
             )
-            
-            
+
+
 def disconnect_chat(update, context):
 
     if update.effective_chat.type == "private":
